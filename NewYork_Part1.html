@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<body>
+ <link rel="stylesheet" href="NewYork_part1.css">
+
+ <div id="TopRow">
+  <div id="MainsDiv">
+    <table id ="MainsTable">
+      <tr>
+        <th id="MainsHeader">MAINS</th>
+      </tr>
+      <tr id="ChickenCutlet" onclick="CConclick();">
+        <td id="CC">Chicken Cutlet with New Peas</td>
+      </tr>
+      <tr id="PNR" onclick="PNRonclick();">
+        <td>Potatoes Noisettes Risoles</td>
+      </tr>
+      <tr id="RSC" onclick="RSConclick();">
+        <td>Roast Squab Chicken</td>
+      </tr>
+      <tr id="VLPP" onclick="VLPPonclick();">
+        <td>Vermont Lobster Pepper Pot</td>
+      </tr>
+      <tr id="STwP" onclick="STwPonclick();">
+        <td>Steak Thumbits with Potato</td>
+      </tr>
+    </table>
+  </div>
+
+  <div id="DessertsDiv">
+    <table id ="DessertsTable">
+      <tr>
+        <th id="DessertsHeader">DESSERTS</th>
+      </tr>
+      <tr id="UpsideDownCake" onclick="UDConclick();">
+        <td id="UDC">Upside Down Cake</td>
+      </tr>
+      <tr id="FSP" onclick="FSPonclick();">
+        <td>Fresh Strawberry Pie</td>
+      </tr>
+      <tr id="NIC" onclick="NIConclick();">
+        <td>Neapolitan Ice Cream</td>
+      </tr>
+      <tr id="RG" onclick="RGonclick();">
+        <td>Raspberry Gateau</td>
+      </tr>
+      <tr id="FC" onclick="FConclick();">
+        <td>Fruit Cocktail</td>
+      </tr>
+    </table>
+  </div>
+
+  <div id="SidesDiv">
+    <table id ="SidesTable">
+      <tr>
+        <th id="SidesHeader">SIDES</th>
+      </tr>
+      <tr id="NP" onclick="NPonclick();">
+        <td id="NwP">New Peas</td>
+      </tr>
+      <tr id="CMP" onclick="CMPonclick();">
+        <td>Creamed Mashed Potates</td>
+      </tr>
+      <tr id="ATT" onclick="ATTonclick();">
+        <td>Asparagus Tips On Toast</td>
+      </tr>
+      <tr id="CSa" onclick="CSaonclick();">
+        <td>Combination Salad</td>
+      </tr>
+      <tr id="CSo" onclick="CSoonclick();">
+        <td>Cream of Tomato Soup</td>
+      </tr>
+        <tr id="HMS" onclick="HMSonclick();">
+        <td>Homemade Mustard Pickles</td>
+      </tr>
+        <tr id="CaT" onclick="CaTonclick();">
+        <td>Carrots and Turnips</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<button id="CheckButton" onClick="checkCode();">Check</button>
+<input id="MainsCode" type="text">
+<input id="DessertsCode" type="text">
+<input id="SidesCode" type="text">
+<a href="NewYork_part2.html">
+<input type="button" id="buttonProceed" onclick="location.href='NewYork_part2.html" value="Continue"/></a>
+</body>
+<script>
+  document.getElementById("MainsCode").style.visibility='hidden';
+  document.getElementById("DessertsCode").style.visibility='hidden';
+  document.getElementById("SidesCode").style.visibility='hidden';
+          document.getElementById("buttonProceed").style.visibility='hidden';
+
+
+  function CConclick() {
+    if (document.getElementById('ChickenCutlet').style.background == 'green') {
+      document.getElementById('ChickenCutlet').style.background = '';
+    } else {
+      document.getElementById('ChickenCutlet').style.background = 'green';
+    }
+    document.getElementById('MainsCode').value=document.getElementById('MainsCode').value + '1';
+  }
+  function PNRonclick() {
+    if (document.getElementById('PNR').style.background == 'green') {
+      document.getElementById('PNR').style.background = '';
+    } else {
+      document.getElementById('PNR').style.background = 'green';
+    }
+        document.getElementById('MainsCode').value=document.getElementById('MainsCode').value + '2';
+  }  
+  function RSConclick() {
+    if (document.getElementById('RSC').style.background == 'green') {
+      document.getElementById('RSC').style.background = '';
+    } else {
+      document.getElementById('RSC').style.background = 'green';
+    }
+    document.getElementById('MainsCode').value=document.getElementById('MainsCode').value + '3';
+
+  }  
+  function VLPPonclick() {
+    if (document.getElementById('VLPP').style.background == 'green') {
+      document.getElementById('VLPP').style.background = '';
+    } else {
+      document.getElementById('VLPP').style.background = 'green';
+    }
+        document.getElementById('MainsCode').value=document.getElementById('MainsCode').value + '4';
+
+  }  
+  function STwPonclick() {
+    if (document.getElementById('STwP').style.background == 'green') {
+      document.getElementById('STwP').style.background = '';
+    } else {
+      document.getElementById('STwP').style.background = 'green';
+    }
+        document.getElementById('MainsCode').value=document.getElementById('MainsCode').value + '5';
+  }
+
+    function UDConclick() {
+    if (document.getElementById('UpsideDownCake').style.background == 'green') {
+      document.getElementById('UpsideDownCake').style.background = '';
+    } else {
+      document.getElementById('UpsideDownCake').style.background = 'green';
+    }
+        document.getElementById('DessertsCode').value=document.getElementById('DessertsCode').value + '1';
+  }
+    function FSPonclick() {
+    if (document.getElementById('FSP').style.background == 'green') {
+      document.getElementById('FSP').style.background = '';
+    } else {
+      document.getElementById('FSP').style.background = 'green';
+    }
+        document.getElementById('DessertsCode').value=document.getElementById('DessertsCode').value + '2';
+  }
+    function NIConclick() {
+    if (document.getElementById('NIC').style.background == 'green') {
+      document.getElementById('NIC').style.background = '';
+    } else {
+      document.getElementById('NIC').style.background = 'green';
+    }
+        document.getElementById('DessertsCode').value=document.getElementById('DessertsCode').value + '3';
+  }
+    function RGonclick() {
+    if (document.getElementById('RG').style.background == 'green') {
+      document.getElementById('RG').style.background = '';
+    } else {
+      document.getElementById('RG').style.background = 'green';
+    }
+        document.getElementById('DessertsCode').value=document.getElementById('DessertsCode').value + '4';
+
+  }
+    function FConclick() {
+    if (document.getElementById('FC').style.background == 'green') {
+      document.getElementById('FC').style.background = '';
+    } else {
+      document.getElementById('FC').style.background = 'green';
+    }
+        document.getElementById('DessertsCode').value=document.getElementById('DessertsCode').value + '5';
+
+  }
+
+      function NPonclick() {
+    if (document.getElementById('NP').style.background == 'green') {
+      document.getElementById('NP').style.background = '';
+    } else {
+      document.getElementById('NP').style.background = 'green';
+    }
+            document.getElementById('SidesCode').value=document.getElementById('SidesCode').value + '1';
+
+  }
+      function CMPonclick() {
+    if (document.getElementById('CMP').style.background == 'green') {
+      document.getElementById('CMP').style.background = '';
+    } else {
+      document.getElementById('CMP').style.background = 'green';
+    }
+                document.getElementById('SidesCode').value=document.getElementById('SidesCode').value + '2';
+  }
+      function ATTonclick() {
+    if (document.getElementById('ATT').style.background == 'green') {
+      document.getElementById('ATT').style.background = '';
+    } else {
+      document.getElementById('ATT').style.background = 'green';
+    }
+                document.getElementById('SidesCode').value=document.getElementById('SidesCode').value + '3';
+  }
+      function CSaonclick() {
+    if (document.getElementById('CSa').style.background == 'green') {
+      document.getElementById('CSa').style.background = '';
+    } else {
+      document.getElementById('CSa').style.background = 'green';
+    }
+                document.getElementById('SidesCode').value=document.getElementById('SidesCode').value + '4';
+
+  }
+      function CSoonclick() {
+    if (document.getElementById('CSo').style.background == 'green') {
+      document.getElementById('CSo').style.background = '';
+    } else {
+      document.getElementById('CSo').style.background = 'green';
+    }
+                document.getElementById('SidesCode').value=document.getElementById('SidesCode').value + '5';
+
+  }
+      function HMSonclick() {
+    if (document.getElementById('HMS').style.background == 'green') {
+      document.getElementById('HMS').style.background = '';
+    } else {
+      document.getElementById('HMS').style.background = 'green';
+    }
+                document.getElementById('SidesCode').value=document.getElementById('SidesCode').value + '6';
+
+  }
+      function CaTonclick() {
+    if (document.getElementById('CaT').style.background == 'green') {
+      document.getElementById('CaT').style.background = '';
+    } else {
+      document.getElementById('CaT').style.background = 'green';
+    }
+
+                    document.getElementById('SidesCode').value=document.getElementById('SidesCode').value + '7';
+
+  }
+
+  function checkCode() {
+    var codeMains = document.getElementById("MainsCode").value;
+    var codeHashMains = hash(codeMains);
+    var codeDesserts = document.getElementById("DessertsCode").value;
+    var codeHashDesserts = hash(codeDesserts);
+    var codeSides = document.getElementById("SidesCode").value;
+    var codeHashSides = hash(codeSides);
+    if (codeHashMains == 177556 && codeHashDesserts == 177556 && codeHashSides == 177556) {
+        document.getElementById("CheckButton").style.visibility='hidden';
+                  document.getElementById("buttonProceed").style.visibility='visible';
+    }
+  }
+
+    function hash(str) {
+  str = str.toString();
+  
+  let result = 5381;
+  
+  for (let i = 0; i < str.length; i++) {
+    let c = str.charCodeAt(i);
+    result = ((result << 5) + result) ^ c;
+  }
+  return result
+}
+
+</script>
+</html>

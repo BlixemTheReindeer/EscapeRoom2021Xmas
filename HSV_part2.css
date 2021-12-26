@@ -1,0 +1,255 @@
+html,body{
+  /*margin: 0; */
+  height: 90%;
+  /*width: 100%;*/
+  font-family: monospace;
+  background-image: url(space2.gif);
+  background-size:cover; /* cover;*/
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/*
+#wrap{
+	font-size: 60px;
+	color: white;
+	position: absolute;
+    z-index: 1;
+	top: 5%;
+	left: 0;
+	width: 100%;
+	height: 10%;
+	display: flex;
+	justify-content: center;
+	/*align-items: center;
+}
+
+#text{
+	position: absolute;
+    z-index: 1;
+    top: 10%;
+	left: 50%; /*20%;29%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-size: 60px;
+	color: white;
+    font-family: monospace;
+    text-align: center;
+    -webkit-text-stroke: 2px black;
+    font-weight: bolder;
+}
+*/
+
+#text{
+	    background: rgba(0, 0, 0, 0.5); 
+	text-align: center;
+width: 50%;
+border: 2px solid white;
+border-radius: 15px
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-size: 60px;
+	color: white;
+    font-family: monospace;
+    text-align: center;
+    -webkit-text-stroke: 2px black;
+    font-weight: bolder;
+    align-items: center;
+    margin: auto;
+}
+
+#divS11 {
+	z-index: 1;
+	position: absolute;
+	top: 50%;
+	left: 10%;
+   width: 240px;
+  height: 100px;
+  margin: 10px;
+  border: 1px solid white;
+}
+#divS12 {
+	z-index: 1;
+	position: absolute;
+	top: 50%;
+	left: 30%;
+   width: 240px;
+  height: 100px;
+  margin: 10px;
+  border: 1px solid white;
+}
+#divS13 {
+	z-index: 1;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+   width: 240px;
+  height: 100px;
+  margin: 10px;
+  border: 1px solid white;
+}
+#divS14 {
+	z-index: 1;
+	position: absolute;
+	top: 50%;
+	left: 70%;
+   width: 240px;
+  height: 100px;;
+  margin: 10px;
+  border: 1px solid white;
+}
+#divS21 {
+	z-index: 1;
+	position: absolute;
+	top: 70%;
+	left: 10%;
+   width: 240px;
+  height: 100px;
+  margin: 10px;
+  border: 1px solid white;
+}
+#divS22 {
+	z-index: 1;
+	position: absolute;
+	top: 70%;
+	left: 30%;
+   width: 240px;
+  height: 100px;
+  margin: 10px;
+  border: 1px solid white;
+}
+#divS23 {
+	z-index: 1;
+	position: absolute;
+	top: 70%;
+	left: 50%;
+   width: 240px;
+  height: 100px;
+  margin: 10px;
+  border: 1px solid white;
+}
+#divS24 {
+	z-index: 1;
+	position: absolute;
+	top: 70%;
+	left: 70%;
+   width: 240px;
+  height: 100px;
+  margin: 10px;
+  border: 1px solid white;
+}
+
+#divA1 {
+	z-index: 1;
+	position: absolute;
+	top: 20%;
+	left: 10%;
+   width: 240px; 200px;
+  height: 100px;
+  margin: 10px;
+  border: 1px solid white;
+}
+
+#divA2 {
+	z-index: 1;
+	position: absolute;
+	top: 20%;
+	left: 30%;
+   width: 240px;
+  height: 100px;
+  margin: 10px;
+  border: 1px solid white;
+}
+
+#divA3 {
+	z-index: 1;
+	position: absolute;
+	top: 20%;
+	left: 50%;
+   width: 240px;
+  height: 100px;
+  margin: 10px;
+  border: 1px solid white;
+}
+
+#divA4 {
+	z-index: 1;
+	position: absolute;
+	top: 20%;
+	left: 70%;
+  width: 240px;
+  height: 100px;
+  margin: 10px;
+  border: 1px solid white;
+}
+
+#ResetButtonDiv {
+  z-index: 1;
+  position: absolute;
+  left: 45%;
+  top: 25%;
+  margin: auto
+    border: 1px solid white;
+  width: 240px;
+}
+
+#ResetButton {
+  font-size: 20px;
+  text-align: center;
+  background: white;
+  font-family: monospace;
+  /*color: black;*/
+  border: 10px;
+  border-color: white; /*black;*/
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 8px;
+}
+#ResetButton:hover{
+	background: limegreen;
+	background-color: limegreen;
+}
+
+#checkAnswerButton {
+  font-size: 20px;
+  text-align: center;
+  background: white;
+  font-family: monospace;
+  /*color: black;*/
+  border: 10px;
+  border-color: white; /*black;*/
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 8px;
+}
+#checkAnswerButton:hover{
+	background: limegreen;
+	background-color: limegreen;
+}
+
+#buttonProceed{
+  position: absolute;
+  z-index: 1;
+  top: 90%;
+  left: 45%; /*40%;*/
+  font-size: 32px;
+  text-align: center;
+  background: lightgray;
+  font-family: monospace;
+  /*color: black;*/
+  border: 10px;
+  border-color: limegreen; /*black;*/
+  cursor: pointer;
+  border-radius: 8px;
+}
+#buttonProceed:hover{
+	background: limegreen;
+	background-color: limegreen;
+}
+.highlight{
+    background: red;
+}

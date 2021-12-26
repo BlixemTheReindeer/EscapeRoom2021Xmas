@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<body>
+ <link rel="stylesheet" href="Portland_part2.css">
+
+   <div class="relative">
+        <button id= "button1" type="button"  name="no" onclick="addImg1()">
+        <img src="potionBlue.png" width="140" height="200"/></button>
+        <button id= "button2" type="button"  name="no" onclick="addImg2()">
+        <img src="potionRed.png" width="140" height="200"/></button>
+        <button id= "button3" type="button"  name="no" onclick="addImg3()">
+        <img src="potionGreen.png" width="140" height="200"/></button>
+        <button id= "button4" type="button"  name="no" onclick="addImg4()">
+        <img src="potionPurple.png" width="140" height="200"/></button>
+    </div>
+
+    <div id="potionCounter">
+<table>
+  <tr><td id="blueCounter">Blue:</td><td id="blueCounterValue">0</td></tr>
+  <tr><td id="redCounter">Red:</td><td id="redCounterValue">0</td></tr>
+  <tr><td id="greenCounter">Green:</td><td id="greenCounterValue">0</td></tr>
+  <tr><td id="purpleCounter">Purple: </td><td id="purpleCounterValue">0</td></tr>
+</table>
+</div>
+<div id="ButtonDiv">
+<button id="ResetButton" onClick="window.location.reload();">Reset</button>
+<button id="CheckButton" onClick="checkCode();">Check</button>
+    </div>  
+
+<div id="fireDiv">
+
+<div class="content">
+  <div class="light"></div>
+  <div class="fire">
+    <div id="back" class="back"></div>
+    <div id="medium" class="medium"></div>
+    <div id="front" class="front"></div>
+  </div>
+  <div class="wood">
+    <div class="stick"></div>
+    <div class="stick"></div>
+    <div class="stick"></div>
+  </div>
+  
+</div>
+</div>
+
+<input id="codeBlue" type="text">
+<input id="codeGreen" type="text">
+<input id="codePurple" type="text">
+<input id="codeRed" type="text">
+
+<!--     
+<div class="row" id="wrap">
+      <div class="column" id="potion1">
+        <img src=potionBlue.png width="102" height="270">
+        <button class="btn">Button</button>
+      </div>
+      <div class="column" id="potion2">
+        <img src=potionRed.png width="102" height="270">
+        <button class="btn">Button</button>
+      </div>
+      <div class="column" id="potion3">
+        <img src=potionGreen.png width="102" height="270">
+        <button class="btn">Button</button>
+      </div>
+      <div class="column" id="potion4">
+        <img src=potionPurple.png width="102" height="270">
+        <button class="btn">Button</button>
+      </div>
+</div> -->
+<a href="NewYork_part1.html">
+<input type="button" id="buttonProceed" onclick="location.href='NewYork_part1.html" value="Continue"/></a>
+      <div id="displayRight"></div>
+      <div id="displayWrong"></div>
+</body>
+
+<script>
+   document.getElementById("codeBlue").style.visibility='hidden';
+   document.getElementById("codeRed").style.visibility='hidden';
+   document.getElementById("codeGreen").style.visibility='hidden';
+   document.getElementById("codePurple").style.visibility='hidden';
+   document.getElementById("buttonProceed").style.visibility='hidden';
+
+   function addImg1() { 
+    var blueVal = parseInt(document.getElementById('blueCounterValue').innerHTML);
+    document.getElementById('blueCounterValue').innerHTML = blueVal + 1;
+    document.getElementById("codeBlue").value = document.getElementById("codeBlue").value + 1;
+
+  }
+  
+  function addImg2() { 
+    var redVal = parseInt(document.getElementById('redCounterValue').innerHTML);
+    document.getElementById('redCounterValue').innerHTML = redVal + 1;
+      document.getElementById("codeRed").value = document.getElementById("codeRed").value + 2;
+  }
+  
+  function addImg3() { 
+    var greenVal = parseInt(document.getElementById('greenCounterValue').innerHTML);
+    document.getElementById('greenCounterValue').innerHTML = greenVal + 1;
+      document.getElementById("codeGreen").value = document.getElementById("codeGreen").value + 3;
+  }
+  
+  function addImg4() { 
+    var purpleVal = parseInt(document.getElementById('purpleCounterValue').innerHTML);
+    document.getElementById('purpleCounterValue').innerHTML = purpleVal + 1;
+      document.getElementById("codePurple").value = document.getElementById("codePurple").value + 4;
+  }
+
+  function checkCode() {
+        var codeValBlue    = document.getElementById("codeBlue").value;
+        var codeHashBlue   = hash(codeValBlue);
+        var codeValRed     = document.getElementById("codeRed").value;
+        var codeHashRed    = hash(codeValRed);
+        var codeValGreen   = document.getElementById("codeGreen").value;
+        var codeHashGreen  = hash(codeValGreen);
+        var codeValPurple  = document.getElementById("codePurple").value;
+        var codeHashPurple = hash(codeValPurple);
+    if (codeHashBlue == 177556 && codeHashRed == 177559 && codeHashGreen == 177558 && codeHashPurple == 177553) {
+            document.getElementById("displayWrong").innerHTML = ""
+            document.getElementById("front").style.background="greenyellow";
+            document.getElementById("medium").style.background="forestgreen";
+            document.getElementById("back").style.background="darkgreen";
+      document.getElementById("displayRight").innerHTML = "it worked! A portal opened!"
+            document.getElementById("buttonProceed").style.visibility='visible';
+    } else {
+            document.getElementById("displayWrong").innerHTML = "The fire looks purple...something isn't right, better make a new fire and try again"
+                        document.getElementById("front").style.background="fuchsia";
+            document.getElementById("medium").style.background="mediumorchid";
+            document.getElementById("back").style.background="purple";
+        document.getElementById("codeBlue").value = "";
+        document.getElementById("codeRed").value = "";
+        document.getElementById("codeGreen").value = "";
+        document.getElementById("codePurple").value = "";
+        document.getElementById('blueCounterValue').innerHTML="0";
+        document.getElementById('redCounterValue').innerHTML="0";
+        document.getElementById('greenCounterValue').innerHTML="0";
+        document.getElementById('purpleCounterValue').innerHTML="0";
+    }
+    } 
+
+  function hash(str) {
+  str = str.toString();
+  
+  let result = 5381;
+  
+  for (let i = 0; i < str.length; i++) {
+    let c = str.charCodeAt(i);
+    result = ((result << 5) + result) ^ c;
+  }
+
+  return result;
+}
+</script>
+</html>
