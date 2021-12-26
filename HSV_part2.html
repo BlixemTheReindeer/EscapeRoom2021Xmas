@@ -34,33 +34,33 @@ function drop(ev) {
 
 <div id="displayWrong"></div>
 <div id="displayRight"></div>
- <a href="Portland_part1.html">
-    <input type="button" id="buttonProceed" onclick="location.href='Portland_part1.html" value="Continue"/>
+ <a href="NewYork_part1.html">
+    <input type="button" id="buttonProceed" onclick="location.href='NewYork_part1.html" value="Continue"/>
 </a>
 
 <div id="divS11" ondrop="drop(event)" ondragover="allowDrop(event)">
-  <img src="saturn.jpg" draggable="true" ondragstart="drag(event)" id="drag1" width="240" height="100">
+  <img src="planetSaturn.png" draggable="true" ondragstart="drag(event)" id="drag1" width="240" height="100">
 </div>
 <div id="divS21" ondrop="drop(event)" ondragover="allowDrop(event)">
-  <img src="mercury.jpg" draggable="true" ondragstart="drag(event)" id="drag2" width="240" height="100">
+  <img src="planetMercury.png" draggable="true" ondragstart="drag(event)" id="drag2" width="240" height="100">
 </div>
 <div id="divS12" ondrop="drop(event)" ondragover="allowDrop(event)">
-  <img src="venus.png" draggable="true" ondragstart="drag(event)" id="drag3" width="240" height="100">
+  <img src="planetVenus.png" draggable="true" ondragstart="drag(event)" id="drag3" width="240" height="100">
 </div>
 <div id="divS13" ondrop="drop(event)" ondragover="allowDrop(event)">
-  <img src="mars.jpg" draggable="true" ondragstart="drag(event)" id="drag4" width="240" height="100">
+  <img src="planetMars.png" draggable="true" ondragstart="drag(event)" id="drag4" width="240" height="100">
 </div>
 <div id="divS14" ondrop="drop(event)" ondragover="allowDrop(event)">
-  <img src="uranus.jpg" draggable="true" ondragstart="drag(event)" id="drag5" width="240" height="100">
+  <img src="planetUranus.png" draggable="true" ondragstart="drag(event)" id="drag5" width="240" height="100">
 </div>
 <div id="divS22" ondrop="drop(event)" ondragover="allowDrop(event)">
-  <img src="jupiter.jpg" draggable="true" ondragstart="drag(event)" id="drag6" width="240" height="100">
+  <img src="planetJupiter.png" draggable="true" ondragstart="drag(event)" id="drag6" width="240" height="100">
 </div>
 <div id="divS23" ondrop="drop(event)" ondragover="allowDrop(event)">
-  <img src="neptune.jpg" draggable="true" ondragstart="drag(event)" id="drag7" width="240" height="100">
+  <img src="planetNeptune.png" draggable="true" ondragstart="drag(event)" id="drag7" width="240" height="100">
 </div>
 <div id="divS24" ondrop="drop(event)" ondragover="allowDrop(event)">
-  <img src="pluto.jpg" draggable="true" ondragstart="drag(event)" id="drag8" width="240" height="100">
+  <img src="planetEarth.png" draggable="true" ondragstart="drag(event)" id="drag8" width="240" height="100">
 </div>
 
 <div id="divA1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
@@ -70,16 +70,17 @@ function drop(ev) {
 
 <script>
 document.getElementById("buttonProceed").style.visibility='hidden';
-function checkAnswer() {
+function checkAnswerVal() {
 	if(document.getElementById('divA1').getElementsByTagName('img')[0] != null) {
-		if(document.getElementById('divA1').getElementsByTagName('img')[0].id == 'drag1') {
+		if(document.getElementById('divA1').getElementsByTagName('img')[0].id == 'drag2') {
 			if(document.getElementById('divA2').getElementsByTagName('img')[0] != null) {
-				if(document.getElementById('divA2').getElementsByTagName('img')[0].id == 'drag2') {
+				if(document.getElementById('divA2').getElementsByTagName('img')[0].id == 'drag7') {
 					if(document.getElementById('divA3').getElementsByTagName('img')[0] != null) {
-						if(document.getElementById('divA3').getElementsByTagName('img')[0].id == 'drag3') {
+						if(document.getElementById('divA3').getElementsByTagName('img')[0].id == 'drag4') {
 							if(document.getElementById('divA4').getElementsByTagName('img')[0] != null) {
-								if(document.getElementById('divA4').getElementsByTagName('img')[0].id == 'drag4') {
+								if(document.getElementById('divA4').getElementsByTagName('img')[0].id == 'drag6') {
 									document.getElementById("buttonProceed").style.visibility='visible';
+									return 0;
 								}
 							}
 						}
@@ -87,6 +88,14 @@ function checkAnswer() {
 				}
 			}
 		}
+	}
+	return -1;
+}
+
+function checkAnswer() {
+	var ans = checkAnswerVal();
+	if (ans == -1) {
+		window.location.reload();
 	}
 }
 </script>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+	 <link rel="stylesheet" href="NewYork_part2.css">
+<div id="row">
+	<input id="code1" maxlength="2" placeholder="1">
+    <input id="code2" maxlength="2" placeholder="2">
+    <input id="code3" maxlength="2" placeholder="3">
+	<input id="code4" maxlength="2" placeholder="4">
+</div>
+</body>
+<button id="CheckButton" onClick="checkCode();">Check</button>
+<a href="final.html">
+<input type="button" id="ContinueButton" onclick="location.href='final.html" value="Correct!"/></a>
+<input id="inputCode" type="text">
+<!-- <button id="ResetButton" onClick="window.location.reload();">Reset</button> -->
+
+<script>
+    document.getElementById("inputCode").style.visibility='hidden';
+    document.getElementById("ContinueButton").style.visibility='hidden';
+	function checkCode() {
+		var c1 = document.getElementById("code1").value;
+		var c2 = document.getElementById("code2").value;
+		var c3 = document.getElementById("code3").value;
+		var c4 = document.getElementById("code4").value;
+		var h1 = hash(c1);
+		var h2 = hash(c2);
+		var h3 = hash(c3);
+		var h4 = hash(c4);
+		if (h1==177539 && h2==177640 && h3==5859595 && h4==5859459) {
+		    document.getElementById("CheckButton").style.visibility='hidden';
+		    document.getElementById("ContinueButton").style.visibility='visible';
+		} else {
+			window.location.reload();
+		}
+	}
+
+function hash(str) {
+  str = str.toString();
+  
+  let result = 5381;
+  
+  for (let i = 0; i < str.length; i++) {
+    let c = str.charCodeAt(i);
+    result = ((result << 5) + result) ^ c;
+  }
+  return result
+}
+</script>
+</html>

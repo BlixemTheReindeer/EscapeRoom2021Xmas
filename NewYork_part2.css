@@ -1,0 +1,88 @@
+html,body{
+  margin: 0; 
+  height: 100%;
+  background-size: cover;
+  background-color: brown;
+  /*background-image: "door.jpg";*/
+}
+
+#row {
+	width: 90%;
+	height: 90%;
+}
+
+#code1 {
+	position: absolute;
+	top: 25%;
+	left: 4%;
+	width: 300px;
+	height: 300px;
+    font-size: 170px;
+    justify-content: center;
+    text-align: center;
+}
+#code2 {
+	position: absolute;
+	width: 300px;
+	height: 300px;
+    font-size: 170px;
+	top: 25%;
+	left: 28%;
+    text-align: center;
+}
+#code3 {
+	position: absolute;
+	width: 300px;
+	top: 25%;
+    font-size: 170px;
+    text-align: center;
+	height: 300px;
+	right: 28%;
+}
+#code4 {
+	position: absolute;
+	width: 300px;
+	height: 300px;
+    font-size: 170px;
+	top: 25%;
+	right: 4%;
+    text-align: center;
+}
+
+#CheckButton {
+    position: absolute;
+    left: 45%;
+    top: 80%;
+    height: 5%;
+    width: 10%;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    font-size: 25px;
+    border: 2px solid white;
+       background-color: black;
+
+        display: inline-block;
+}
+#CheckButton:hover {
+    background-color: darkslategray;
+}
+
+#ContinueButton {
+    position: absolute;
+    left: 45%;
+    top: 80%;
+    height: 5%;
+    width: 10%;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    font-size: 25px;
+    border: 2px solid white;
+       background-color: black;
+
+        display: inline-block;
+}
+#ContinueButton:hover {
+    background-color: limegreen;
+}

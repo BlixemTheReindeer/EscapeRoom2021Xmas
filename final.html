@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+	 <link rel="stylesheet" href="final.css">
+<div id="row">
+    <select id="code1">     
+    	<option value="Location1">Location 1</option>
+    	<option value="Portland">Portland</option>
+    	<option value="Huntsville">Huntsville</option>
+    	<option value="New York">New York</option>
+    </select>
+    <select id="code2">     
+    	<option value="Location2">Location 2</option>
+	    <option value="Portland">Portland</option>
+	    <option value="Huntsville">Huntsville</option>
+    	<option value="New York">New York</option>
+    </select>
+    <select id="code3">     
+    	<option value="Location3">Location 3</option>
+    	<option value="Portland">Portland</option>
+    	<option value="Huntsville">Huntsville</option>
+    	<option value="New York">New York</option>
+    </select>
+</div>
+</body>
+<button id="CheckButton" onClick="checkCode();">Check</button>
+<a href="finalCorrect.html">
+<input type="button" id="ContinueButton" onclick="location.href='finalCorrect.html" value="Correct!		"/></a>
+<script>
+	    document.getElementById("ContinueButton").style.visibility='hidden';
+
+	function checkCode() {
+		var c1 = document.getElementById("code1").value;
+		var c2 = document.getElementById("code2").value;
+		var c3 = document.getElementById("code3").value;
+		if (c1=="New York" && c2=="Portland" && c3=="Huntsville") {
+		    document.getElementById("CheckButton").style.visibility='hidden';
+		    document.getElementById("ContinueButton").style.visibility='visible';
+		} else {
+			window.location.reload();
+		}
+	}
+
+function hash(str) {
+  str = str.toString();
+  
+  let result = 5381;
+  
+  for (let i = 0; i < str.length; i++) {
+    let c = str.charCodeAt(i);
+    result = ((result << 5) + result) ^ c;
+  }
+  return result
+}
+</script>
+</html>

@@ -69,8 +69,8 @@
         <button class="btn">Button</button>
       </div>
 </div> -->
-<a href="NewYork_part1.html">
-<input type="button" id="buttonProceed" onclick="location.href='NewYork_part1.html" value="Continue"/></a>
+<a href="HSV_part1.html">
+<input type="button" id="buttonProceed" onclick="location.href='HSV_part1.html" value="Continue"/></a>
       <div id="displayRight"></div>
       <div id="displayWrong"></div>
 </body>
@@ -92,19 +92,19 @@
   function addImg2() { 
     var redVal = parseInt(document.getElementById('redCounterValue').innerHTML);
     document.getElementById('redCounterValue').innerHTML = redVal + 1;
-      document.getElementById("codeRed").value = document.getElementById("codeRed").value + 2;
+      document.getElementById("codeRed").value = document.getElementById("codeRed").value + 1;
   }
   
   function addImg3() { 
     var greenVal = parseInt(document.getElementById('greenCounterValue').innerHTML);
     document.getElementById('greenCounterValue').innerHTML = greenVal + 1;
-      document.getElementById("codeGreen").value = document.getElementById("codeGreen").value + 3;
+      document.getElementById("codeGreen").value = document.getElementById("codeGreen").value + 1;
   }
   
   function addImg4() { 
     var purpleVal = parseInt(document.getElementById('purpleCounterValue').innerHTML);
     document.getElementById('purpleCounterValue').innerHTML = purpleVal + 1;
-      document.getElementById("codePurple").value = document.getElementById("codePurple").value + 4;
+      document.getElementById("codePurple").value = document.getElementById("codePurple").value + 1;
   }
 
   function checkCode() {
@@ -116,12 +116,12 @@
         var codeHashGreen  = hash(codeValGreen);
         var codeValPurple  = document.getElementById("codePurple").value;
         var codeHashPurple = hash(codeValPurple);
-    if (codeHashBlue == 177556 && codeHashRed == 177559 && codeHashGreen == 177558 && codeHashPurple == 177553) {
+    if (codeHashBlue == 114652116 && codeHashRed == 5859365 && codeHashGreen == 193359092 && codeHashPurple == 177556) {
             document.getElementById("displayWrong").innerHTML = ""
             document.getElementById("front").style.background="greenyellow";
             document.getElementById("medium").style.background="forestgreen";
             document.getElementById("back").style.background="darkgreen";
-      document.getElementById("displayRight").innerHTML = "it worked! A portal opened!"
+      document.getElementById("displayRight").innerHTML = "It worked! A portal opened!"
             document.getElementById("buttonProceed").style.visibility='visible';
     } else {
             document.getElementById("displayWrong").innerHTML = "The fire looks purple...something isn't right, better make a new fire and try again"

@@ -90,6 +90,25 @@ html,body{
 #CheckButton:hover {
     background-color: darkslategray;
 }
+
+#ResetButton {
+      position: absolute;
+    left: 44%;
+    top: 88%;
+    height: 5%;
+    width: 10%;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    font-size: 25px;
+    border: 2px solid white;
+       background-color: rgba(0,0,0,0.7);
+
+        display: inline-block;
+}
+#ResetButton:hover {
+    background-color: darkslategray;
+}
 #buttonProceed {
     position: absolute;
     left: 44%;

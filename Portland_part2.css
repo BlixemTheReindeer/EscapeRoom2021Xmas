@@ -3,6 +3,7 @@ html,body{
   height: 100%;
   background-image: url(mysticalforest.jpg);
   background-size: cover;
+    background-size: cover;
 }
 
 form{

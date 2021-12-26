@@ -1,0 +1,75 @@
+html,body{
+  margin: 0; 
+  height: 100%;
+  background-size: cover;
+  background-color: purple;
+}
+
+#code1 {
+    position: absolute;
+    left: 25%;
+    top: 40%;
+    width:200px;
+    height:100px;
+    font-size: 35px;
+    justify-content: center;
+}
+
+#code2 {
+    position: absolute;
+    left: 43.5%;
+    top: 40%;
+    width:200px;
+    height:100px;
+    font-size: 35px;
+    justify-content: center;
+}
+
+#code3 {
+    position: absolute;
+    right: 25%;
+    top: 40%;
+    width:200px;
+    height:100px;
+    font-size: 35px;
+    justify-content: center;
+}
+
+
+#CheckButton {
+    position: absolute;
+    left: 45%;
+    top: 80%;
+    height: 5%;
+    width: 10%;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    font-size: 25px;
+    border: 2px solid white;
+       background-color: black;
+
+        display: inline-block;
+}
+#CheckButton:hover {
+    background-color: darkslategray;
+}
+
+#ContinueButton {
+    position: absolute;
+    left: 45%;
+    top: 80%;
+    height: 5%;
+    width: 9%;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    font-size: 25px;
+    border: 2px solid white;
+       background-color: black;
+align-content: center;
+        display: inline-block;
+}
+#ContinueButton:hover {
+    background-color: limegreen;
+}

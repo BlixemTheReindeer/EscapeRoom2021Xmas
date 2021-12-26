@@ -85,13 +85,17 @@
 <input id="DessertsCode" type="text">
 <input id="SidesCode" type="text">
 <a href="NewYork_part2.html">
-<input type="button" id="buttonProceed" onclick="location.href='NewYork_part2.html" value="Continue"/></a>
+<input type="button" id="buttonProceed" onclick="location.href='NewYork_part2.html" value="Correct!"/></a>
+<button id="ResetButton" onClick="window.location.reload();">Reset</button>
+
 </body>
 <script>
   document.getElementById("MainsCode").style.visibility='hidden';
   document.getElementById("DessertsCode").style.visibility='hidden';
   document.getElementById("SidesCode").style.visibility='hidden';
           document.getElementById("buttonProceed").style.visibility='hidden';
+          document.getElementById("ResetButton").style.visibility='hidden';
+
 
 
   function CConclick() {
@@ -250,9 +254,15 @@
     var codeHashDesserts = hash(codeDesserts);
     var codeSides = document.getElementById("SidesCode").value;
     var codeHashSides = hash(codeSides);
-    if (codeHashMains == 177556 && codeHashDesserts == 177556 && codeHashSides == 177556) {
+    if (codeHashMains == 177559 && codeHashDesserts == 177556 && codeHashSides == 177552) {
         document.getElementById("CheckButton").style.visibility='hidden';
                   document.getElementById("buttonProceed").style.visibility='visible';
+    } else {
+       document.getElementById('MainsCode').value='';
+       document.getElementById('DessertsCode').value='';
+       document.getElementById('SidesCode').value='';
+       document.getElementById("ResetButton").style.visibility='visible';
+       document.getElementById("CheckButton").style.visibility='hidden';
     }
   }
 
